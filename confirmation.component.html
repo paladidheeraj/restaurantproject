@@ -1,0 +1,73 @@
+<br>
+<p class="heading">Fill The Details</p>
+<form [formGroup]="regform" class="example-form" (ngSubmit)="onSave(regform.value)">  
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Ex:Leonardo Decarpio" formControlName="name">
+      <mat-hint *ngIf="regform.get('name').errors"></mat-hint>
+      <mat-hint>Enter Minimum 2 Characters and Maximum of 20 Characters.</mat-hint>
+    </mat-form-field>
+  </div>
+  <br>  
+  <div class="example-container">
+    <input name="id" type="hidden" />  
+  </div>
+  <br>
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>MobileNo:</mat-label>
+      <input matInput placeholder="EX:9999999999" formControlName="mobno">
+      <mat-hint *ngIf="regform.get('mobno').errors"></mat-hint>
+      <mat-hint>Enter 10 digit Mobile Number</mat-hint>
+    </mat-form-field>
+  </div> 
+ <br>
+ <div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Ex:180030000@kluniversity.in" formControlName="email">
+    <mat-hint *ngIf="regform.get('email').errors"></mat-hint>
+  </mat-form-field>
+</div>
+<br> 
+<div class="example-container">
+  <mat-label>PaymentMode</mat-label>
+  <br>
+  <label>
+    <input type="radio" value="CashOnDelivery" formControlName="payment">
+      <span>CashOnDelivery</span>
+  </label>
+  <br>
+  <label>
+    <input type="radio" value="UpiPayment" formControlName="payment">
+      <span>UpiPayment</span>
+  </label>
+  <br>
+  <label>
+    <input type="radio" value="DebitCard" formControlName="payment">
+      <span>DebitCard</span>
+  </label>
+  <br>
+  <label>
+    <input type="radio" value="CreditCard" formControlName="payment">
+      <span>CreditCard</span>
+  </label>
+  <br>
+</div>
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput placeholder="Ex:Amalapuram" formControlName="address">
+    <mat-hint *ngIf="regform.get('address').errors"></mat-hint>
+    <mat-hint>Enter Minimum 2 Characters and Maximum of 100 Characters.</mat-hint>
+  </mat-form-field>
+</div>
+<!-- <input type="submit" value="{{valbutton}}" />--> 
+<br>
+<br>
+    <button mat-button class="a" (click)="opendialog()">Confirm</button>
+    <br>
+    <br>
+    <a routerLink="/view" routerLinkActive="active" target="_blank" rel="bookmark">View Details</a>
+</form>   

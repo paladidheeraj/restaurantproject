@@ -1,0 +1,37 @@
+.example-spacer
+{
+    flex:1 1 auto;
+}
+.ti
+{
+  color:white;
+}
+.subti
+{
+  color:white;
+}
+.inf
+{
+  color: white;
+}
+.example-card {
+    max-width: 417px;
+     display:inline-block;
+     background-color:black;
+     border-color:red;
+  }
+  
+  .example-header-image {
+    background-image: url('/assets/images/back.jpg');
+    background-size: cover;
+  }
+
+    mat-toolbar{
+      background-color: blue;
+ 
+    }  
+    .but
+    {
+      background-color:blue;
+      color:white;
+    }

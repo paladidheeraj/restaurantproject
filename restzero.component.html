@@ -1,0 +1,16 @@
+<mat-dialog-content>
+    <mat-selection-list #x>
+           <mat-list-option *ngFor="let l of list0">
+                    {{l}}
+            </mat-list-option>
+        </mat-selection-list>
+</mat-dialog-content>    
+<p>
+    Ordered Food Items: {{x.selectedOptions.selected.length}}
+  </p>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button> 
+    <a routerLink="/confirm" routerLinkActive="active" target="_blank" rel="bookmark">Order</a>
+    <br>
+</mat-dialog-actions>
+

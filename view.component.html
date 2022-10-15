@@ -1,0 +1,24 @@
+<table border='1'>  
+  
+    <tr>  
+      <td>Id</td>  
+      <td>Name</td>  
+      <td>Mobno</td>
+      <td>email</td>
+      <td>Payment</td>
+      <td>Address</td>  
+      <td>Edit</td>
+      <td>Delete</td>  
+    </tr>  
+    <tr *ngFor="let kk of Repdata;let ind = index">  
+         
+      <td>{{ind + 1}}</td>  
+      <td>{{kk.name}}</td>  
+      <td>{{kk.mobno}}</td>
+      <td>{{kk.email}}</td>
+      <td>{{kk.payment}}</td> 
+      <td>{{kk.address}}</td>  
+     <td><a (click)="edit(kk)" style="color:blueviolet">Edit</a></td> 
+      <td><a (click)="delete(kk._id)" style="color:blueviolet">Delete</a>  </td>  
+    </tr>  
+  </table>  

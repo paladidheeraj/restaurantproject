@@ -1,0 +1,63 @@
+
+  <mat-toolbar color="aria-label">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Food Delivery Website</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon aria-hidden="false" aria-label="Example LIKE icon">home</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>  
+  </mat-toolbar>
+<div>
+    <mat-card class="example-card" *ngFor="let m of menu">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class="ti">{{m.name}}</mat-card-title>
+        <mat-card-subtitle class="subti">{{m.place}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{m.imageurl}}" height="300px" >
+      <mat-card-content class="inf">
+        <p>
+             {{m.info}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions >
+        <button mat-button class="but">LIKE</button>
+        <button mat-button class="but">SHARE</button>       
+        <span *ngIf="m.id==0">
+          <button mat-button class="but" (click)="showDialog0(list0)"> Menu</button>
+         </span>  
+         <span *ngIf="m.id==1">
+          <button mat-button class="but" (click)="showDialog1(list1)"> Menu</button>
+         </span> 
+         <span *ngIf="m.id==2">
+          <button mat-button class="but" (click)="showDialog2(list2)"> Menu</button>
+         </span> 
+         <span *ngIf="m.id==3">
+          <button mat-button class="but" (click)="showDialog3(list3)"> Menu</button>
+         </span> 
+         <span *ngIf="m.id==4">
+          <button mat-button class="but" (click)="showDialog4(list4)"> Menu</button>
+         </span> 
+         <span *ngIf="m.id==5">
+          <button mat-button class="but" (click)="showDialog5(list5)"> Menu</button>
+         </span> 
+         <span *ngIf="m.id==6">
+          <button mat-button class="but" (click)="showDialog6(list6)"> Menu</button>
+         </span> 
+         <span *ngIf="m.id==7">
+          <button mat-button class="but" (click)="showDialog7(list7)"> Menu</button>
+         </span> 
+         <span *ngIf="m.id==8">
+          <button mat-button class="but" (click)="showDialog8(list8)"> Menu</button>
+         </span> 
+         <span *ngIf="m.id==9">
+          <button mat-button class="but" (click)="showDialog9(list9)"> Menu</button>
+         </span> 
+      </mat-card-actions>
+    </mat-card>
+  </div>
